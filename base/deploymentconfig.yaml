@@ -1,7 +1,9 @@
 kind: DeploymentConfig
 apiVersion: apps.openshift.io/v1
 metadata:
-  name: postgresql
+  name: postgresql  
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   strategy:
     type: Recreate
