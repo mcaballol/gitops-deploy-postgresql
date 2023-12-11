@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+bases:
+- ../../base
+
+generatorOptions:
+ disableNameSuffixHash: true
+secretGenerator:
+- name: postgresql
+  envs:
+  - env/db.env
+
+
+
+resources:
+- namespace.yaml
+- pvc.yaml
