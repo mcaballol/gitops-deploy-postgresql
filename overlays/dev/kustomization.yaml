@@ -13,5 +13,5 @@ secretGenerator:
 
 
 resources:
-- namespace.yaml
+#- namespace.yaml
 - pvc.yaml
